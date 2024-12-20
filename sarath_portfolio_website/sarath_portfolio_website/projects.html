@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sarath kumar Gudibanda</title>
+    <style>
+        /* General Styles with Background Image */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('project_image_background.gif') no-repeat center center fixed; /* Add your background image here */
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Transparent Overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+            z-index: -1; /* Keep overlay behind content */
+        }
+
+        header {
+            text-align: center;
+            margin: 30px 0;
+            color: #fff; /* White text for contrast */
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Section Styling */
+        section {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Project Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            cursor: pointer; /* Make image clickable */
+        }
+
+        .project-card h3 {
+            margin: 10px 0;
+            color: #4CAF50;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin: 10px;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        footer a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <p>"You can do anything you set your mind to."</p>
+        <p>- Sarath Kumar Gudibanda.</p>
+    </header>
+
+    <section>
+        <h2>Highlighted Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="college_project_1.jpg" alt="College project" onclick="openModal(this.src)">
+                <h3>Project 1: College Project</h3>
+                <p>A machine learning model to classify oil spills, utilizing advanced machine learning techniques. The project involved the use of Python, TensorFlow, and Keras. The model was designed classify oil spills, leveraging various data features and applying deep learning algorithms to improve classification, accuracy,recall,confusion matrix, precision and F1 score. Through this project, I gained hands-on experience in applying machine learning tools to real-world environmental challenges.</p>
+            </div>
+            <div class="project-card">
+                <img src="portfolio_sarath.png" alt="Personal portfolio" onclick="openModal(this.src)">
+                <h3>Project 2: Personal Portfolio</h3>
+                <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+            </div>
+            <div class="project-card">
+                <img src="powerbi_project.png" alt="Power BI Dashboard" onclick="openModal(this.src)">
+                <h3>Project 3: Electric Vehicle Charging Station</h3>
+                <p>Created an interactive Power BI dashboard to visually represent key metrics, facilitating data-driven decision-making.</p>
+            </div>
+            <div class="project-card">
+                <img src="Project_Tableau4.jpg" alt="Tableau Dashboard" onclick="openModal(this.src)">
+                <h3>Project 4: Electric Vehicle Report</h3>
+                <p>Created an interactive Tableau dashboard to visually represent key Data, Percentage of all Vehicle, Battery Vehicle and states they most selling, and other metrics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <img id="modalImage" src="" alt="Full Image">
+    </div>
+
+    <footer>
+        <a href="education.html">Previous Page</a>
+        <a href="index.html">Home Page</a>
+        <a href="skills.html">Next Page</a>
+    </footer>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

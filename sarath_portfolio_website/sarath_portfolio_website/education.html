@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background-image: url('background.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(39, 170, 103, 0.5); /* Slight transparency for better readability */
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(45, 194, 145, 0.7);
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        section h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .folder {
+            background-color: #98bd96; /* Folder color */
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 200px;
+            margin: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+        .folder:hover {
+            background-color: #34b6ad;
+        }
+        .folder-content {
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+            padding-left: 20px;
+            text-align: left;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(102, 182, 139, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .card p {
+            margin: 5px 0;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #8f8f35; /* Card title color */
+        }
+        nav a {
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: rgb(137, 31, 31);
+            background-color: rgba(137, 100, 30, 0.9); /* Orange button */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: rgb(66, 68, 200); /* Darker orange */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education</h1>
+    </header>
+    <section>
+        <div class="folder" onclick="toggleFolder('school')">
+            <h2>School</h2>
+        </div>
+        <div id="school" class="folder-content">
+            <div class="card">
+                <h3>ZPHS Sadum</h3>
+                <p><strong>Board:</strong> State Board of Andhra Pradesh</p>
+                <p><strong>Degree:</strong>Secondary School Certificate (SSC)</p>
+                <p><strong>Year of Passed:</strong> March, 2018</p>
+                <p><strong>Place:</strong> Chittoor, Andhra Pradesh.</p>
+
+
+                
+            </div>
+        </div>
+
+        <div class="folder" onclick="toggleFolder('college')">
+            <h2>College</h2>
+        </div>
+        <div id="college" class="folder-content">
+            <div class="card">
+                <h3>Sri Chaitanya Junior College</h3>
+                <p><strong>Board:</strong> State Board of Andhra Pradesh</p>
+                <p><strong>Degree:</strong>Higher Secondary Examination (MPC)</p>
+                <p><strong>Year of Passed:</strong> March, 2020</p>
+                <p><strong>Place:</strong> Tirupathi, Andhra Pradesh.</p>
+
+
+            </div>
+        </div>
+
+        <div class="folder" onclick="toggleFolder('university')">
+            <h2>University</h2>
+        </div>
+        <div id="university" class="folder-content">
+            <div class="card">
+                <h3>Sri Venkateswara College Of Engineering and Technology</h3>
+                <p><strong>Degree:</strong> Bachelor of Technology (B.Tech)</p>
+                <p><strong>Stream:</strong> Electronics and Communication Engineering (ECE)</p>
+                <p><strong>Year of Passed:</strong> May, 2024</p>
+                <p><strong>Place:</strong> Chittoor, Andhra Pradesh.</p>
+
+
+            </div>
+        </div>
+
+        <div class="folder" onclick="toggleFolder('certifications')">
+            <h2>Certifications</h2>
+        </div>
+        <div id="certifications" class="folder-content">
+            <div class="card">
+                <h3>Data Analytics</h3>
+                <p><strong>Institution:</strong> Besant Technologies</p>
+                <p><strong>Duration:</strong> 6 months</p>
+                <p><strong>Skills Acquired:</strong> Power BI, Tableau, SQL, Python, Excel</p>
+            </div>
+        </div>
+    </section>
+    <nav>
+        <a href="about.html">Previous Page</a>
+        <a href="index.html">Home Page</a>
+        <a href="projects.html">Next Page</a>
+    </nav>
+
+    <script>
+        function toggleFolder(folderId) {
+            // Get the folder content element by ID
+            const folderContent = document.getElementById(folderId);
+            // Toggle the display style between 'none' and 'block'
+            if (folderContent.style.display === "block") {
+                folderContent.style.display = "none";
+            } else {
+                folderContent.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

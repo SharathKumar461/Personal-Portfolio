@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Sarath Kumar Gudibanda</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        header .logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        header img {
+            width: 60px; /* Adjust size based on your logo */
+            height: 60px; /* Adjust size based on your logo */
+            object-fit: contain; /* Maintain aspect ratio */
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            margin: 20px auto;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline .entry img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            object-fit: contain; /* Maintain aspect ratio */
+        }
+
+        .timeline h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #007bff;
+        }
+
+        .timeline p {
+            margin: 5px 0;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center; /* Center align entries */
+            margin-bottom: 20px;
+        }
+
+        .entry {
+            flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+            text-align: center;
+            padding: 10px;
+            margin: 10px; /* Space between entries */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007bff;
+            color: white;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .navigation {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .navigation a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 1.5rem; /* Smaller heading on mobile */
+            }
+
+            .entry {
+                flex: 1 1 100%; /* Full width on small screens */
+            }
+
+            header {
+                flex-direction: column; /* Stack logo and image */
+                align-items: center; /* Center align */
+                padding: 10px; /* Adjust padding */
+            }
+
+            header img {
+                margin-top: 10px; /* Space between logo and image */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Profile Logo -->
+        <div class="logo">
+            SG
+        </div>
+
+        <!-- Andhra Pradesh Board Logo -->
+        <img src="andhra_logo.png" alt="Andhra Pradesh Board Logo" onerror="this.onerror=null; this.src='placeholder.png';">
+    </header>
+
+    <!-- About Section -->
+    <section>
+        <h2>About Me</h2>
+        <p>Hi, I'm Sarath Kumar Gudibanda, a passionate individual with passion for technology and innovation. I strive to learn new things in all my endeavors, blending creativity and technical expertise.</p>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+    
+        <div class="row">
+            <!-- Graduation -->
+            <div class="entry">
+                <img src="SVCE_logo.jpeg" alt="Sri Venkateswara College Of Engineering and technology">
+                <h3>B.Tech in Electronics and Communication Engineering</h3>
+                <p>Sri Venkateswara College Of Engineering and Technology, Chittoor,Andhra Pradesh (2020-2024)</p>
+            </div>
+
+            <!-- Higher Secondary Education -->
+            <div class="entry">
+                <img src="sriChaitanya_logo.jpg" alt="Sri Chaitanya College Logo">
+                <h3>Higher Secondary Education</h3>
+                <p>Sri Chaitanya College, Tirupathi, Andhra Pradesh (2020)</p>
+            </div>
+        </div>
+
+        <!-- Row 2: Narayana School and Besant Technologies -->
+        <div class="row">
+            <!-- Secondary Education -->
+            <div class="entry">
+                <img src="ZPHS_sadum_school.png" alt="ZPHS T.Sadum School Logo">
+                <h3>Secondary Education</h3>
+                <p>ZPHS High School, Sadum, Andhra Pradesh (2018)</p>
+            </div>
+
+            <!-- Data Analytics Training -->
+            <div class="entry">
+                <img src="besent_technologies_logo.jpeg" alt="Besant Technologies Logo">
+                <h3>Data Analytics Training</h3>
+                <p>Besant Technologies, Marathahalli, Bengaluru, Karnataka (6 months)</p>
+                <p>Skills: SQL, Excel, Power BI, Tableau, Python</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Links -->
+    <div class="navigation">
+        <a href="resume.html">Previous Page</a>
+        <a href="index.html">Home Page</a>
+        <a href="education.html">Next Page</a>
+    </div>
+</body>
+</html>

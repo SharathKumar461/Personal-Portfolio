@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('blog_background.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(76, 175, 80, 0.8);
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .card {
+            width: 160px;
+            height: 220px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+        }
+
+        .card-front {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .card-back {
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Journey</h1>
+    </header>
+
+    <section>
+        <p>My journey after as a B.Tech student has been transformative. It’s where I laid the foundation for my technical and analytical skills, setting the stage for my future aspirations. Here’s a glimpse of how this path shaped me:</p>
+
+        <h2>Venturing into Data Analytics</h2>
+        <p>To complement my ECE knowledge, I pursued a Data Analyst course. This journey introduced me to vital tools and skills, including:</p>
+
+        <div class="cards-container">
+            <!-- Card for Power BI -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="powerBI.png" alt="Power BI">
+                        <h3>Power BI</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Build interactive dashboards and uncover insights.</p>
+                        <button onclick="openLink('https://powerbi.microsoft.com/')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for Tableau -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="tableau_icon.png" alt="Tableau">
+                        <h3>Tableau</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Craft visually engaging data stories.</p>
+                        <button onclick="openLink('https://www.tableau.com/')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for SQL -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="sql_icon.png" alt="SQL">
+                        <h3>SQL</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Manage and query data efficiently.</p>
+                        <button onclick="openLink('https://www.sql.org/')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for Python -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="python_icon.png" alt="Python">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Analyze datasets, create models, and automate tasks.</p>
+                        <button onclick="openLink('https://www.python.org/')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<style>
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+.card {
+    width: 180px;
+    height: 220px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: #4CAF85;
+    color: white;
+    font-size: 16px;
+}
+
+.card-back {
+    background-color: #f9f9f9;
+    color: #333;
+    transform: rotateY(180deg);
+    font-size: 14px;
+}
+</style>
+
+
+    </section>
+
+    <nav>
+        <a href="gallery.html">Previous Page</a>
+        <a href="index.html">Home Page</a>
+        <a href="resume.html">Next Page</a>
+    </nav>
+
+    <script>
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
